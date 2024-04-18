@@ -101,13 +101,12 @@ class Prompt:
         self.__template = template
         self.__output_formatting = output_formatting
         self.__oracle = oracle
-        self.__responses = [PromptResponse]
+        self.__responses = []
     
     def instantiate(self, concern, communities):
-        # TODO: markup might be an attribute of the ethical concern
-        markup = MARKUPS[concern]
-
         if len(communities) > 0:
+            # TODO: markup might be an attribute of the ethical concern
+            markup = MARKUPS[concern]
             self.__instances = self.__replace_markups(markup, communities)
         else:
             self.__instances = [self.template]
