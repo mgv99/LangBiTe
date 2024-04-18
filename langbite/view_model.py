@@ -47,6 +47,7 @@ class EvaluationView:
     _oracle_evaluation = None
     _oracle_prediction = None
     _evaluation = None
+    _responses = None
 
     @property
     def provider(self):
@@ -84,7 +85,7 @@ class EvaluationView:
     def evaluation(self):
         return self._evaluation
     
-    def __init__(self, provider, model, concern, type, assessment, template, oracle_evaluation, oracle_prediction, evaluation):
+    def __init__(self, provider, model, concern, type, assessment, template, oracle_evaluation, oracle_prediction, evaluation, responses):
         self._provider = provider
         self._model = model
         self._concern = concern
@@ -94,7 +95,8 @@ class EvaluationView:
         self._oracle_evaluation = oracle_evaluation
         self._oracle_prediction = oracle_prediction
         self._evaluation = evaluation
-    
+        self._responses = responses
+
     def to_dict(self):
         return {
             'Provider': self.provider,
