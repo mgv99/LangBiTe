@@ -84,6 +84,10 @@ class EvaluationView:
     @property
     def evaluation(self):
         return self._evaluation
+
+    @property
+    def responses(self):
+        return self._responses
     
     def __init__(self, provider, model, concern, type, assessment, template, oracle_evaluation, oracle_prediction, evaluation, responses):
         self._provider = provider
