@@ -34,6 +34,7 @@ factory.register_builder('OpenAIGPT40613', OpenAIChatServiceBuilder('gpt-4-0613'
 factory.register_builder('OpenAIGPT35Turbo', OpenAIChatServiceBuilder('gpt-3.5-turbo'))
 factory.register_builder('OpenAIGPT35Turbo16k', OpenAIChatServiceBuilder('gpt-3.5-turbo-16k'))
 factory.register_builder('OpenAIGPT4', OpenAIChatServiceBuilder('gpt-4'))
+factory.register_builder('OpenAIGPT4oMini', OpenAIChatServiceBuilder('gpt-4o-mini'))
 
 # Replicate models
 

@@ -16,7 +16,7 @@ class SentimentAnalyzerOracle:
         "False" if the actual response equals any of the expected responses or is equivalent to any of them.'
     
     def __init__(self, **config):
-        self.__llm_service: OpenAIChatService = llm_factory.factory.create('OpenAIGPT4', **config)
+        self.__llm_service: OpenAIChatService = llm_factory.factory.create('OpenAIGPT4oMini', **config)
         self.__llm_service.temperature = 0
         self.__llm_service.tokens = 10
 
